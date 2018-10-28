@@ -12,6 +12,11 @@ Plan is to employ packer for the building of images to have all
 environments identical and use terraform for creating
 (and later destroying) the needed resources.
 
+## Basics
+
+Plan is to create several often used templates to be used
+in different situations
+
 ## TODO:
 
 * basic image with packer
