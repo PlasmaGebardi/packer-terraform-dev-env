@@ -32,7 +32,11 @@
     },
     {
       "type": "shell",
-      "source": "../scripts/install-basic.sh"
+      "source": "../scripts/install-factorio.sh"
+    },
+    {
+      "type": "shell",
+      "source": "../scripts/fetch-data-factorio.sh"
     },
     {
       "type": "shell",
