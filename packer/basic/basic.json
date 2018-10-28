@@ -19,5 +19,24 @@
     "instance_type": "t2.micro",
     "ssh_username": "ec2-user",
     "ami_name": "packer-basic {{timestamp}}"
-  }]
+  }],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "./README-basic",
+      "destination": "/home/ec2-user"
+    },
+    {
+      "type": "shell",
+      "source": "../scripts/update-basic.sh"
+    },
+    {
+      "type": "shell",
+      "source": "../scripts/install-basic.sh"
+    },
+    {
+      "type": "shell",
+      "source": "../scripts/cleanup-basic.sh"
+    }
+  ]
 }
