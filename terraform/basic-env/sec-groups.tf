@@ -26,3 +26,20 @@ resource "aws_security_group" "packer-terraform-sg" {
     Name      = "packer-terraform-${var.packer_terraform_id}-sg"
   }
 }
+
+resource "aws_security_group" "factorio-sg" {
+  name        = "factorio-sg"
+  description = "Security group to handle factorio related rules"
+
+  ingress {
+    protocol    = "udp"
+    from_port   = 34197
+    to_port     = 34197
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags {
+    Terraform = "True"
+    Name      = "factorio-sg"
+  }
+}

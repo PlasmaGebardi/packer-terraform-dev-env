@@ -19,3 +19,9 @@ variable "ec2_keypair_name" {
 }
 
 variable "vpn_cidr" {}
+
+#variable "aws_ami_owner" {}
+
+
+#variable "aws_ami_image" {}
+
